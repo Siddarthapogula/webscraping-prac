@@ -11,8 +11,7 @@ soup = BeautifulSoup(doc, 'html.parser')
 # print(soup.prettify())
 
 cont = soup.find('div', class_='links')
-cont.name = 'span'
-
+cont.string = 'hello'
 
 with open('modifiedsample.html', 'w') as f:
     f.write(soup.prettify())
